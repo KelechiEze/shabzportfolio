@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="hero-image">
           <div className="hero-image-container">
             <Image 
-              src="/shabz.png" // from public folder
+              src="/sha.png" // from public folder
               alt="Jone Lee - Professional Developer" 
               className="hero-profile-image"
               width={400}  // adjust to your image width
