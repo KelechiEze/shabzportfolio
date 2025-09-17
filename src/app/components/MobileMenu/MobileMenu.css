@@ -1,0 +1,171 @@
+/* Mobile Menu Styles with Enhanced Navigation */
+.mobile-menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 320px;
+  max-width: 85vw;
+  background: hsl(var(--card));
+  border-left: 1px solid hsl(var(--border));
+  z-index: 101;
+  animation: slideInRight 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-elegant);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--nav-bg));
+}
+
+.mobile-menu-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: var(--transition-smooth);
+}
+
+.mobile-menu-close:hover {
+  background: hsl(var(--nav-hover));
+  color: hsl(var(--accent));
+  transform: scale(1.1);
+}
+
+.mobile-menu-nav {
+  flex: 1;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.025em;
+  transition: var(--transition-smooth);
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  background: hsl(var(--nav-hover));
+  border-left-color: hsl(var(--accent));
+  color: hsl(var(--accent));
+  transform: translateX(4px);
+}
+
+.mobile-menu-link:active {
+  background: hsl(var(--accent) / 0.1);
+}
+
+/* Mobile Cart Section in Menu */
+.mobile-menu-cart-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--nav-bg));
+  border-radius: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mobile-menu-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: hsl(var(--foreground));
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: hsl(var(--card));
+  border-radius: 0.375rem;
+  border: 1px solid hsl(var(--border));
+}
+
+.mobile-menu-buy-button {
+  width: 100%;
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 14px 0 hsl(var(--accent) / 0.4);
+}
+
+.mobile-menu-buy-button:hover {
+  background: hsl(var(--accent-glow));
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 hsl(var(--accent) / 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 400px) {
+  .mobile-menu {
+    width: 280px;
+  }
+  
+  .mobile-menu-cart-section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+  }
+}

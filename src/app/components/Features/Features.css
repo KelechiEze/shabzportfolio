@@ -1,0 +1,126 @@
+/* Features Section Styles */
+.features {
+  padding: 6rem 0;
+  background: var(--background-gradient);
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: hsl(var(--accent));
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.features-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.features-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.features-card:hover {
+  transform: translateY(-8px);
+  border-color: hsl(var(--accent) / 0.5);
+  box-shadow: var(--shadow-elegant), var(--glow-accent);
+}
+
+.features-card:hover .features-icon {
+  transform: scale(1.1);
+  color: hsl(var(--accent-glow));
+}
+
+.features-icon {
+  color: hsl(var(--accent));
+  margin-bottom: 1.5rem;
+  transition: var(--transition-spring);
+  display: flex;
+  justify-content: center;
+}
+
+.features-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.features-card-description {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Mobile Styles - Less than 800px */
+@media (max-width: 799px) {
+  .features {
+    padding: 4rem 0;
+  }
+
+  .features-container {
+    padding: 0 var(--mobile-padding);
+  }
+
+  .features-header {
+    margin-bottom: 3rem;
+  }
+
+  .features-label {
+    font-size: 0.75rem;
+  }
+
+  .features-heading {
+    font-size: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .features-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .features-card-title {
+    font-size: 1.25rem;
+  }
+
+  .features-card-description {
+    font-size: 0.875rem;
+  }
+}
