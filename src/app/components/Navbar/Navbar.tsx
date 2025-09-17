@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="navbar-logo">
           <Image 
-            src="/shabz.png" // public folder image
+            src="/sha.png" // public folder image
             alt="INBIO Profile" 
             className="navbar-logo-image"
             priority     // preloads the image
